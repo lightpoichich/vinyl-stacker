@@ -29,7 +29,13 @@
 - Backend (Discogs proxy) needs: DISCOGS_PERSONAL_TOKEN env var — STATUS: pending
 - Backend (Server Actions) needs: Database tables + RLS — STATUS: pending
 
+## Resolved Issues
+- FB-001 (BLOCKING): Mobile scan button didn't navigate — fixed by wrapping in `<Link>`
+- FB-002 (IMPORTANT): Collection detail self-referential API fetch — fixed by calling `discogsFetch` directly
+- FB-003 (IMPORTANT): catno/country data loss on wishlist→collection — accepted as design choice (nullable fields)
+
 ## Open Issues
+- MINOR: Duplicate unique index on wishlist_items (redundant but harmless)
 
 ## Current Phase
-Phase 4 — Build | Step 1: Infra
+Phase 6 — Integrate
